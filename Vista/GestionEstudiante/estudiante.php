@@ -28,15 +28,17 @@
         <div class="container table-responsive col-md-11 mt-md-3">
 
           <!-- Buscador -->
-          <form class="mt-1 mb-3">
-          <label
-            for="searchTerm" class="fs-5">
-            Buscar
-          </label>
-          <input
-            id="searchTerm" 
-            type="text"
-            onkeyup="doSearch()"/>
+          <form class="mt-1 mb-3 col-md-3">
+          
+            <label
+              for="searchTerm" class="fs-5 form-label fw-bold">
+              Buscar
+            </label>
+            <input
+              class="form-control"
+              id="searchTerm" 
+              type="text"
+              onkeyup="doSearch()"/>
           </form>
 
           <!-- Tabla -->

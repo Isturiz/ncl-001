@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestión: estudiantes </title>
+  <title>Gestión: profesores </title>
   <!-- Bootstrap local -->
   <link rel="stylesheet" href="../../Recursos/css/bootstrap/bootstrap.css">
   
@@ -28,12 +28,14 @@
         <div class="container table-responsive col-md-11 mt-md-3">
 
           <!-- Buscador -->
-          <form class="mt-1 mb-3">
+          <form class="mt-1 mb-3 col-md-3">
+          
             <label
-              for="searchTerm" class="fs-5">
+              for="searchTerm" class="fs-5 form-label fw-bold">
               Buscar
             </label>
             <input
+              class="form-control"
               id="searchTerm" 
               type="text"
               onkeyup="doSearch()"/>
