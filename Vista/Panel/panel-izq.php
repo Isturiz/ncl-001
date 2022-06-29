@@ -56,7 +56,7 @@
     <ul class="nav flex-column mb-2">
 
       <li class="nav-item">
-        <a class="nav-link" href="../../Controladores/Usuario/consultar.php">
+        <a class="nav-link" href="../../Vista/MantenimientoUsuario/usuario.php">
           Usuarios
         </a>
       </li>
