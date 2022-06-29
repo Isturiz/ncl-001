@@ -26,10 +26,26 @@
       <!-- Main -->
       <div class="col-md-10">
         <div class="container table-responsive col-md-11 mt-md-3">
-          <table class="table table-bordered table-hover">
-            <thead>
-              <tr>
 
+          <!-- Buscador -->
+          <form class="mt-1 mb-3">
+          <label
+            for="searchTerm" class="fs-5">
+            Buscar
+          </label>
+          <input
+            id="searchTerm" 
+            type="text"
+            onkeyup="doSearch()"/>
+          </form>
+
+          <!-- Tabla -->
+          <table 
+            class="table table-bordered table-hover"
+            id="datos">
+
+            <thead >
+              <tr>
                 <th><div style="width: 100px;"></div> Acción</th>
                 <th>Cédula</th>
                 <th>Nombre</th>
@@ -37,9 +53,7 @@
                 <th>Nacimiento</th>
                 <th>Teléfono</th>
                 <th>Dirección</th>
-                
-
-
+   
                 <th>Nombre&nbsp;representante</th>
                 <th>Apellido&nbsp;representante</th>
                 <th>Telefono&nbsp;representante</th>
@@ -80,8 +94,6 @@
                 <td> <?php echo $row['telefono'];?> </td>
                 <td> <?php echo $row['direccion'];?> </td>
 
-
-
                 <td> <?php echo $row['nombreRepresentante'];?> </td>
                 <td> <?php echo $row['apellidoRepresentante'];?> </td>
                 <td> <?php echo $row['telefonoRepresentante'];?> </td>
@@ -98,7 +110,9 @@
               <?php
               }
               ?>
-
+              <tr class='noSearch hide'>
+                <td colspan="5"></td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -106,6 +120,7 @@
     </div>
   </div>
 
+  <script src="../../Recursos/js/custom/buscar.js"></script>
   <script src="../../Recursos/js/bootstrap/bootstrap.js"></script>
 </body>
 </html>

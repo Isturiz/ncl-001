@@ -26,7 +26,24 @@
       <!-- Main -->
       <div class="col-md-10">
         <div class="container table-responsive col-md-11 mt-md-3">
-          <table class="table table-bordered table-hover">
+
+          <!-- Buscador -->
+          <form class="mt-1 mb-3">
+            <label
+              for="searchTerm" class="fs-5">
+              Buscar
+            </label>
+            <input
+              id="searchTerm" 
+              type="text"
+              onkeyup="doSearch()"/>
+          </form>
+
+          <!-- Tabla -->
+          <table
+            class="table table-bordered table-hover"
+            id="datos">
+
             <thead>
               <tr>
 
@@ -74,7 +91,9 @@
               <?php
               }
               ?>
-
+              <tr class='noSearch hide'>
+                <td colspan="5"></td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -82,6 +101,7 @@
     </div>
   </div>
 
+  <script src="../../Recursos/js/custom/buscar.js"></script>  
   <script src="../../Recursos/js/bootstrap/bootstrap.js"></script>
 </body>
 </html>

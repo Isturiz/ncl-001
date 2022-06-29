@@ -6,8 +6,6 @@ $email = $_POST['email'];
 $clave = $_POST['clave'];
 
 
-
-
 session_start();
 $_SESSION['email'] = $email;
 

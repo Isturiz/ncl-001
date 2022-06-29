@@ -16,7 +16,7 @@
 
   <!-- Panel izquierdo -->
   <div class="container-fluid">
-    <div class="row ">
+    <div class="row">
       <?php require_once('../Panel/panel-izq.php'); ?> 
       <div class="col-md-10 col-sm-2">
             <p>MENSAJE DE BIENVENIDA</p>
