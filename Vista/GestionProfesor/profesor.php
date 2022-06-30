@@ -58,6 +58,7 @@
               <tr>
 
                 <th><div style="width: 100px;"></div> Acción</th>
+                <th>Salario</th>
                 <th>Cédula</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
@@ -99,6 +100,7 @@
                   </a>
                 </td>
 
+                <td> <?php echo $row['salario'];?> </td>
                 <td> <?php echo $row['cedula'];?> </td>
                 <td> <?php echo $row['nombre'];?> </td>
                 <td> <?php echo $row['apellido'];?> </td>

@@ -24,6 +24,9 @@ $piano       = '';
 $cuatro      = '';
 $flautaDulce = '';
 
+/* mensualidad */
+$mensualidad = '';
+
 if (isset($_GET['id']))
 {
   $id = $_GET['id'];
@@ -51,6 +54,9 @@ if (isset($_GET['id']))
     $piano       = $row['piano'];
     $cuatro      = $row['cuatro'];
     $flautaDulce = $row['flautaDulce'];
+
+    /* mensualidad */
+    $mensualidad = $row['mensualidad'];
   }
 }
 
@@ -79,7 +85,10 @@ if (isset($_POST['editar']))
   $cuatro      = $_POST['cuatro'];
   $flautaDulce = $_POST['flautaDulce'];
 
-  $query = "UPDATE estudiante set cedula = '$cedula', nombre = '$nombre', apellido = '$apellido', nacimiento = '$nacimiento', telefono = '$telefono', direccion = '$direccion', nombreRepresentante = '$nombreRepresentante', apellidoRepresentante = '$apellidoRepresentante', telefonoRepresentante = '$telefonoRepresentante', cedulaRepresentante = '$cedulaRepresentante', canto = '$canto', piano = '$piano', cuatro = '$cuatro' WHERE id=$id";
+  /* mensualidad */
+  $mensualidad = $_POST['mensualidad'];
+
+  $query = "UPDATE estudiante set cedula = '$cedula', nombre = '$nombre', apellido = '$apellido', nacimiento = '$nacimiento', telefono = '$telefono', direccion = '$direccion', nombreRepresentante = '$nombreRepresentante', apellidoRepresentante = '$apellidoRepresentante', telefonoRepresentante = '$telefonoRepresentante', cedulaRepresentante = '$cedulaRepresentante', canto = '$canto', piano = '$piano', cuatro = '$cuatro', mensualidad = '$mensualidad' WHERE id=$id";
   mysqli_query($conexion, $query);
   //$_SESSION['message'] = 'Task Updated Successfully';
   //$_SESSION['message_type'] = 'warning';

@@ -14,9 +14,12 @@
     $telefono   = $_POST['telefono'];
     $direccion  = $_POST['direccion'];
 
+    /* salario */
+    $salario = $_POST['salario'];
+
   }
 
-  $query = "INSERT INTO profesor (nombre, apellido, nacimiento, cedula, telefono, direccion) VALUES ('$nombre', '$apellido', '$nacimiento', '$cedula', '$telefono', '$direccion')";
+  $query = "INSERT INTO profesor (nombre, apellido, nacimiento, cedula, telefono, direccion, salario) VALUES ('$nombre', '$apellido', '$nacimiento', '$cedula', '$telefono', '$direccion', '$salario')";
 
   $resultado = mysqli_query($conexion, $query);
 

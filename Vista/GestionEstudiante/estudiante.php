@@ -45,7 +45,7 @@
 
           <!-- Botón reporte general -->
           <a
-            href="../../Vista/GestionProfesor/reporteGeneral.php"
+            href="../../Vista/GestionEstudiante/reporteGeneral.php"
             class="btn btn-warning mb-3"
             target="_blank">
             <i class="far fa-file mx-1"></i>  
@@ -61,6 +61,7 @@
             <thead >
               <tr>
                 <th><div style="width: 150px;"></div> Acción</th>
+                <th>Mensualidad</th>
                 <th>Cédula</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
@@ -110,6 +111,8 @@
                     <i class="far fa-trash-alt"></i>
                   </a>
                 </td>
+
+                <td> <?php echo $row['mensualidad'];?> </td>
 
                 <td> <?php echo $row['cedula'];?> </td>
                 <td> <?php echo $row['nombre'];?> </td>

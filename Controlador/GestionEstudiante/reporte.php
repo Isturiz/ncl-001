@@ -24,6 +24,9 @@ $piano       = '';
 $cuatro      = '';
 $flautaDulce = '';
 
+/* mensualidad */
+$mensualidad = '';
+
 if (isset($_GET['id']))
 {
   $id = $_GET['id'];
@@ -51,6 +54,9 @@ if (isset($_GET['id']))
     $piano       = $row['piano'];
     $cuatro      = $row['cuatro'];
     $flautaDulce = $row['flautaDulce'];
+
+    /* mensualidad */
+    $mensualidad = $row['mensualidad'];
   }
 }
 

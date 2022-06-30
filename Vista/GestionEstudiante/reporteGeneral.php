@@ -27,6 +27,7 @@
 
       <thead >
         <tr>
+          <th>Mensualidad</th>
           <th>Nombre</th>
           <th>Apellido</th>
           <th>Cédula</th>
@@ -47,6 +48,7 @@
         {
         ?>
         <tr>
+          <td> <?php echo $row['mensualidad'];?> </td>
           <td> <?php echo $row['nombre'];?> </td>
           <td> <?php echo $row['apellido'];?> </td>
           <td> <?php echo $row['cedula'];?> </td>

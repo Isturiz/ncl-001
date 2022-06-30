@@ -258,6 +258,28 @@
               </label>
             </div>
 
+            <!-- Mensualidad -->
+            <div class="mt-3 col-md-12">
+              <p class="fw-bold form-label fs-4">Mensualidad:</p>
+            </div>
+
+            <div class="mb-3 col-md-3">
+                <label 
+                for="mensualidad"
+                class="form-label">
+                Monto $:
+              </label>
+              <input
+              
+                type="number"
+                class="form-control"
+                id="mensualidad"
+                name="mensualidad"
+                
+                value="<?php echo $mensualidad; ?>"
+              >
+            </div>
+
             <input
               type="number"
               class="invisible"

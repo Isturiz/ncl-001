@@ -12,6 +12,9 @@ $cedula     = '';
 $telefono   = '';
 $direccion  = '';
 
+/* salario */
+$salario    = '';
+
 if (isset($_GET['id']))
 {
   $id = $_GET['id'];
@@ -27,6 +30,9 @@ if (isset($_GET['id']))
     $cedula     = $row['cedula'];
     $telefono   = $row['telefono'];
     $direccion  = $row['direccion'];
+
+    /* salario */
+    $salario = $row['salario'];
     
   }
 }
@@ -44,8 +50,11 @@ if (isset($_POST['editar']))
   $telefono   = $_POST['telefono'];
   $direccion  = $_POST['direccion'];
 
+  /* salario */
+  $salario = $_POST['salario'];
 
-  $query = "UPDATE profesor set cedula = '$cedula', nombre = '$nombre', apellido = '$apellido', nacimiento = '$nacimiento', telefono = '$telefono', direccion = '$direccion' WHERE id=$id";
+
+  $query = "UPDATE profesor set cedula = '$cedula', nombre = '$nombre', apellido = '$apellido', nacimiento = '$nacimiento', telefono = '$telefono', direccion = '$direccion', salario = '$salario' WHERE id=$id";
   mysqli_query($conexion, $query);
   //$_SESSION['message'] = 'Task Updated Successfully';
   //$_SESSION['message_type'] = 'warning';

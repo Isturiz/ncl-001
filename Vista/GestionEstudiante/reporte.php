@@ -29,6 +29,7 @@
       <thead>
 
         <tr>
+          <th>Mensualidad</th>
           <th>Nombre</th>
           <th>Apellido</th>
           <th>Nacimiento</th>
@@ -40,6 +41,7 @@
         
       <tbody>
         <tr>
+          <td> <?php echo $mensualidad; ?>     </td>
           <td> <?php echo $nombre; ?>     </td>
           <td> <?php echo $apellido; ?>   </td>
           <td> <?php echo $nacimiento; ?> </td>

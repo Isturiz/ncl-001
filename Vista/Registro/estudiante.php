@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registrar estudiante </title>
+  <title>Registrar estudiante</title>
   <!-- Bootstrap local -->
   <link rel="stylesheet" href="../../Recursos/css/bootstrap/bootstrap.css">
   
@@ -21,7 +21,7 @@
       <?php require_once('../../Vista/Panel/panel-izq.php'); ?> 
 
       <!-- Main -->
-      <div class="col-md-10">
+      <div class="col-md-10 mb-1">
         <div class="container mt-3 px-5">
 
           <!-- Formulario de registro estudiante -->
@@ -253,6 +253,27 @@
                 for="flautaDulce">
                 Flauta dulce  
               </label>
+            </div>
+
+            <!-- Mensualidad -->
+            <div class="mt-3 col-md-12">
+              <p class="fw-bold form-label fs-4">Mensualidad:</p>
+            </div>
+
+            <div class="mb-3 col-md-3">
+                <label 
+                for="mensualidad"
+                class="form-label">
+                Monto $:
+              </label>
+              <input
+              
+              type="number"
+              class="form-control"
+              id="mensualidad"
+              name="mensualidad"
+              
+              value="20">
             </div>
 
             <!-- registrar -->

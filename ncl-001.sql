@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost
--- Tiempo de generación: 28-06-2022 a las 23:54:08
+-- Tiempo de generación: 30-06-2022 a las 23:16:01
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.5
 
@@ -42,23 +42,22 @@ CREATE TABLE `estudiante` (
   `canto` tinyint(1) NOT NULL,
   `piano` tinyint(1) NOT NULL,
   `cuatro` tinyint(1) NOT NULL,
-  `flautaDulce` tinyint(1) NOT NULL
+  `flautaDulce` tinyint(1) NOT NULL,
+  `mensualidad` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `estudiante`
 --
 
-INSERT INTO `estudiante` (`id`, `cedula`, `nombre`, `apellido`, `nacimiento`, `telefono`, `direccion`, `cedulaRepresentante`, `nombreRepresentante`, `apellidoRepresentante`, `telefonoRepresentante`, `canto`, `piano`, `cuatro`, `flautaDulce`) VALUES
-(12, 12, 'Mauricio', 'Istúriz', '2001-05-23', 1234, 'Yktan', 12345, 'Alejandro', 'Riera', 12345, 1, 1, 1, 0),
-(12341, 0, 'Mauricio', 'Istúriz', '2001-05-23', 1234, 'Yktan', 12345, 'Alejandro', 'Riera', 12345, 1, 1, 1, 0),
-(12343, 0, 'Mauricio', 'Istúriz', '2001-05-23', 1234, 'Yktan', 12345, 'Alejandro', 'Riera', 12345, 1, 1, 1, 1),
-(28286521, 0, 'Mauricio ', 'Istúriz', '2001-05-23', 1511816, 'Urbanización Yucatán', 28286521, 'Alejandro', 'Riera', 1511111, 1, 1, 1, 1),
-(28286522, 1234, 'Mauricio', 'Istúriz', '2001-05-23', 1234, 'Yktan', 12345, 'Alejandro', 'Riera', 12345, 1, 1, 1, 0),
-(28286523, 1234, 'Mauricio', 'Istúriz', '2001-05-23', 1234, 'Yktan', 1111, 'Alejandro', 'Riera', 12345, 1, 1, 1, 0),
-(28286524, 1234, 'Mauricio', 'Istúriz', '2001-05-23', 1234, 'Yktan', 12345, 'Alejandro', 'Riera', 12345, 1, 1, 1, 0),
-(28286525, 1234, 'Mauricio', 'Istúriz', '2001-05-23', 1234, 'Yktan', 12345, 'Alejandro', 'Riera', 12345, 1, 1, 1, 0),
-(28286526, 1234, 'Mauriciodddd', 'Istúriz', '2001-05-23', 1234, 'Yktan', 12345, 'Alejandro', 'Riera', 12345, 1, 1, 1, 0);
+INSERT INTO `estudiante` (`id`, `cedula`, `nombre`, `apellido`, `nacimiento`, `telefono`, `direccion`, `cedulaRepresentante`, `nombreRepresentante`, `apellidoRepresentante`, `telefonoRepresentante`, `canto`, `piano`, `cuatro`, `flautaDulce`, `mensualidad`) VALUES
+(12, 12, 'Félix', 'Campos', '2001-05-23', 1234, 'Yktan', 12345, 'Alejandro', 'Riera', 12345, 1, 1, 1, 0, 40),
+(12341, 0, 'Oriana', 'Istúriz', '2001-05-23', 1234, 'Yktan', 12345, 'Gabriel', 'Riera', 12345, 1, 1, 1, 0, 5),
+(28286521, 0, 'Mauricio ', 'Istúriz', '2001-05-23', 1511816, 'Urbanización Yucatán', 28286521, 'Alejandro', 'Riera', 1511111, 1, 1, 1, 1, 0),
+(28286524, 1234, 'Mauricio', 'Istúriz', '2001-05-23', 1234, 'Yktan', 12345, 'Alejandro', 'Riera', 12345, 1, 1, 1, 0, 0),
+(28286525, 1234, 'Mauricio', 'Istúriz', '2001-05-23', 1234, 'Yktan', 12345, 'Alejandro', 'Riera', 12345, 1, 1, 1, 0, 0),
+(28286527, 1234, 'Mauricio', 'Istúriz', '2001-05-23', 1234, 'Yktan', 12345, 'Alejandro', 'Riera', 12345, 1, 1, 1, 0, 0),
+(28286528, 1234, 'Richard', 'Piña', '2001-05-23', 1234, 'Yktan', 12345, 'Alejandro', 'Riera', 12345, 1, 1, 1, 1, 20);
 
 -- --------------------------------------------------------
 
@@ -73,18 +72,20 @@ CREATE TABLE `profesor` (
   `nacimiento` date NOT NULL,
   `cedula` int(11) NOT NULL,
   `telefono` int(11) NOT NULL,
-  `direccion` text NOT NULL
+  `direccion` text NOT NULL,
+  `salario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `profesor`
 --
 
-INSERT INTO `profesor` (`id`, `nombre`, `apellido`, `nacimiento`, `cedula`, `telefono`, `direccion`) VALUES
-(4, 'Mayra', 'Riera', '1974-05-11', 54321, 12345, 'Yucatán'),
-(5, 'Carolina', 'Lara', '1974-05-11', 54321, 12345, 'Yucatán'),
-(6, 'Mayra', 'Riera', '1974-05-11', 54321, 12345, 'Yucatán'),
-(7, 'Mayra', 'Riera', '1974-05-11', 54321, 12345, 'Yucatán');
+INSERT INTO `profesor` (`id`, `nombre`, `apellido`, `nacimiento`, `cedula`, `telefono`, `direccion`, `salario`) VALUES
+(5, 'Carolina', 'Lara', '1974-05-11', 54321, 12345, 'Yucatán', 120),
+(6, 'Jorge', 'Rojas', '1974-05-11', 54321, 12345, 'Yucatán', 0),
+(7, 'Massiel', 'Rojas', '1974-05-11', 342, 12345, 'Yucatán', 0),
+(8, 'Mayra', 'Riera', '1974-05-11', 54321, 12345, 'Yucatán', 0),
+(9, 'Mauricio', 'Riera', '1974-05-11', 54321, 12345, 'Yucatán', 160);
 
 -- --------------------------------------------------------
 
@@ -136,13 +137,13 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `estudiante`
 --
 ALTER TABLE `estudiante`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28286527;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28286529;
 
 --
 -- AUTO_INCREMENT de la tabla `profesor`
 --
 ALTER TABLE `profesor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`

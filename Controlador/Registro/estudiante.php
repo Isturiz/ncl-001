@@ -24,13 +24,16 @@
     $piano       = $_POST['piano'];
     $cuatro      = $_POST['cuatro'];
     $flautaDulce = $_POST['flautaDulce'];
+
+    /* mensualidad */
+    $mensualidad = $_POST['mensualidad'];
   
   }
   
   /* require_once '../../Vista/Registro/estudiante.php'; */
 
 
-  $query = "INSERT INTO estudiante (nombre, apellido, nacimiento, cedula, telefono, direccion, nombreRepresentante, apellidoRepresentante, telefonoRepresentante, cedulaRepresentante, canto, piano, cuatro, flautaDulce) VALUES ('$nombre', '$apellido', '$nacimiento', '$cedula', '$telefono', '$direccion', '$nombreRepresentante', '$apellidoRepresentante', '$telefonoRepresentante', '$cedulaRepresentante', '$canto', '$piano', '$cuatro', '0')";
+  $query = "INSERT INTO estudiante (nombre, apellido, nacimiento, cedula, telefono, direccion, nombreRepresentante, apellidoRepresentante, telefonoRepresentante, cedulaRepresentante, canto, piano, cuatro, flautaDulce, mensualidad) VALUES ('$nombre', '$apellido', '$nacimiento', '$cedula', '$telefono', '$direccion', '$nombreRepresentante', '$apellidoRepresentante', '$telefonoRepresentante', '$cedulaRepresentante', '$canto', '$piano', '$cuatro', '$flautaDulce', '$mensualidad')";
 
   $resultado = mysqli_query($conexion, $query);
 
@@ -41,5 +44,4 @@
 
   header('Location: ../../Vista/Registro/estudiante.php');
 
-  //require_once '../Gestion/estudiante.php'
 ?>
