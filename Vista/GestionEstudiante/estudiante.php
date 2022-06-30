@@ -27,6 +27,8 @@
       <div class="col-md-10">
         <div class="container table-responsive col-md-11 mt-md-3">
 
+        
+
           <!-- Buscador -->
           <form class="mt-1 mb-3 col-md-3">
           
@@ -41,6 +43,16 @@
               onkeyup="doSearch()"/>
           </form>
 
+          <!-- Botón reporte general -->
+          <a
+            href="../../Vista/GestionProfesor/reporteGeneral.php"
+            class="btn btn-warning mb-3"
+            target="_blank">
+            <i class="far fa-file mx-1"></i>  
+            Exportar tabla como PDF
+          </a>  
+                  
+
           <!-- Tabla -->
           <table 
             class="table table-bordered table-hover"
@@ -48,7 +60,7 @@
 
             <thead >
               <tr>
-                <th><div style="width: 100px;"></div> Acción</th>
+                <th><div style="width: 150px;"></div> Acción</th>
                 <th>Cédula</th>
                 <th>Nombre</th>
                 <th>Apellido</th>
@@ -78,8 +90,18 @@
 
               <tr>
                 <td>
+                  <!-- Botón reporte -->
+                  <a
+                    href="../../Vista/GestionEstudiante/reporte.php?id=<?php echo $row['id']?>"
+                    class="btn btn-warning"
+                    target="_blank">
+                  <i class="far fa-file"></i>
+                  </a>
+                  &nbsp;
                   <!-- Botón editar -->
-                  <a href="../../Vista/GestionEstudiante/editar.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
+                  <a
+                    href="../../Vista/GestionEstudiante/editar.php?id=<?php echo $row['id']?>"
+                    class="btn btn-primary">
                   <i class="far fa-edit"></i>
                   </a>
                   &nbsp;
@@ -101,10 +123,48 @@
                 <td> <?php echo $row['telefonoRepresentante'];?> </td>
                 <td> <?php echo $row['cedulaRepresentante'];?> </td>
 
-                <td> <?php echo $row['canto'];?> </td>
-                <td> <?php echo $row['piano'];?> </td>
-                <td> <?php echo $row['cuatro'];?> </td>
-                <td> <?php echo $row['flautaDulce'];?> </td>
+                <?php
+                  if ($row['canto'] == '1')
+                  {
+                    $canto = 'Sí';
+                  }
+                  else
+                  {
+                    $canto = 'No';
+                  }
+              
+                  if ($row['piano'] == '1')
+                  {
+                    $piano = 'Sí';
+                  }
+                  else
+                  {
+                    $piano = 'No';
+                  }
+              
+                  if ($row['cuatro'] == '1')
+                  {
+                    $cuatro = 'Sí';
+                  }
+                  else
+                  {
+                    $cuatro= 'No';
+                  }
+              
+                  if ($row['flautaDulce'] == '1')
+                  {
+                    $flautaDulce = 'Sí';
+                  }
+                  else
+                  {
+                    $flautaDulce = 'No';
+                  }
+                ?>
+
+                <td> <?php echo $canto;?> </td>
+                <td> <?php echo $piano;?> </td>
+                <td> <?php echo $cuatro;?> </td>
+                <td> <?php echo $flautaDulce;?> </td>
 
               </tr>
 

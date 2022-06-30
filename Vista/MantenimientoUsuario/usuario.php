@@ -63,7 +63,7 @@
               ?>
 
               <tr>
-                <td>
+                <td style="width: 120px;">
                   <!-- Botón editar -->
                   <a href="../../Vista/GestionEstudiante/editar.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
                   <i class="far fa-edit"></i>

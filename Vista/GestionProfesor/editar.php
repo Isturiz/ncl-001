@@ -144,7 +144,7 @@
 
             <!-- Cancelar edición -->
             <a
-              href="../../Vista/GestionEstudiante/estudiante.php"
+              href="../../Vista/GestionProfesor/profesor.php"
               class="btn btn-secondary mt-4">
               Cancelar edición
             </a>

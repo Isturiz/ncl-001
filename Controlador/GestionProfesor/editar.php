@@ -4,7 +4,7 @@ require_once '../../Modelo/conexion.php';
 
 $id = '';
 
-/* datos estudiante */
+/* datos profesor */
 $nombre     = '';
 $apellido   = '';
 $nacimiento = '';
@@ -20,7 +20,7 @@ if (isset($_GET['id']))
   if (mysqli_num_rows($resultado) == 1) {
     $row = mysqli_fetch_array($resultado);
 
-    /* datos estudiante */
+    /* datos profesor */
     $nombre     = $row['nombre'];
     $apellido   = $row['apellido'];
     $nacimiento = $row['nacimiento'];
@@ -35,7 +35,8 @@ if (isset($_POST['editar']))
 {
   $id = $_POST['id'];
 
-  /* datos estudiante */
+  /* datos profesor */
+  
   $nombre     = $_POST['nombre'];
   $apellido   = $_POST['apellido'];
   $nacimiento = $_POST['nacimiento'];
@@ -50,6 +51,7 @@ if (isset($_POST['editar']))
   //$_SESSION['message_type'] = 'warning';
   header('Location: ../../Vista/GestionProfesor/profesor.php');
 }
+
 
 
 ?>

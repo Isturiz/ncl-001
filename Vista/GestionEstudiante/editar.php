@@ -26,6 +26,7 @@
 
           <?php require_once '../../Controlador/GestionEstudiante/editar.php'; ?>
 
+
           <!-- Formulario de registro estudiante -->
           <form
             action="../../Controlador/GestionEstudiante/editar.php"

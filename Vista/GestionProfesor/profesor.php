@@ -29,7 +29,6 @@
 
           <!-- Buscador -->
           <form class="mt-1 mb-3 col-md-3">
-          
             <label
               for="searchTerm" class="fs-5 form-label fw-bold">
               Buscar
@@ -40,6 +39,15 @@
               type="text"
               onkeyup="doSearch()"/>
           </form>
+
+          <!-- Botón reporte general -->
+          <a
+            href="../../Vista/GestionProfesor/reporteGeneral.php"
+            class="btn btn-warning mb-3"
+            target="_blank">
+            <i class="far fa-file mx-1"></i>  
+            Exportar tabla como PDF
+          </a> 
 
           <!-- Tabla -->
           <table
@@ -68,14 +76,25 @@
               ?>
 
               <tr>
-                <td>
+                <td style="width: 170px;">
+                  <!-- Botón reporte -->
+                  <a
+                    href="../../Vista/GestionProfesor/reporte.php?id=<?php echo $row['id']?>"
+                    class="btn btn-warning"
+                    target="_blank">
+                  <i class="far fa-file"></i>
+                  </a>
+                  &nbsp;
                   <!-- Botón editar -->
-                  <a href="../../Vista/GestionProfesor/editar.php?id=<?php echo $row['id']?>" class="btn btn-secondary">
+                  <a
+                    href="../../Vista/GestionProfesor/editar.php?id=<?php echo $row['id']?>"
+                    class="btn btn-primary">
                   <i class="far fa-edit"></i>
                   </a>
                   &nbsp;
                   <!-- Botón eliminar -->
-                  <a href="../../Controlador/GestionProfesor/eliminar.php?id=<?php echo $row['id']?>" class="btn btn-danger">
+                  <a href="../../Controlador/GestionProfesor/eliminar.php?id=<?php echo $row['id']?>"
+                    class="btn btn-danger">
                     <i class="far fa-trash-alt"></i>
                   </a>
                 </td>
