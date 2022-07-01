@@ -19,7 +19,16 @@
     <div class="row">
       <?php require_once('../Panel/panel-izq.php'); ?> 
       <div class="col-md-10 col-sm-2">
-            <p>MENSAJE DE BIENVENIDA</p>
+        <div class="container">
+          <div class="my-3">
+            <center>
+              
+              <h1>Fundación Niños Cantores de Lara</h1>
+              <img class="d-block m-auto" src="../../Recursos/img/logo.jpg" alt="logo">
+            </center>
+            </div>
+
+        </div>
       </div>
     </div>
   </div>
