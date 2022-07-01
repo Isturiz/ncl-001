@@ -126,12 +126,14 @@
                 
                 value="<?php echo $direccion; ?>">
             </div>
+            <?php
+            /* 
 
             <!-- Salario -->
             <div class="mt-3 col-md-12">
               <p class="fw-bold form-label fs-4">Salario:</p>
             </div>
-
+            
             <div class="mb-3 col-md-3">
                 <label 
                 for="salario"
@@ -147,6 +149,8 @@
               
               value="<?php echo $salario; ?>">
             </div>
+            */
+            ?>
 
             <input
               type="number"

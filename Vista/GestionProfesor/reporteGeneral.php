@@ -27,7 +27,9 @@
 
       <thead >
         <tr>
-          <th>Salario</th>
+          <?php
+          //<th>Salario</th>
+          ?>
           <th>Nombre</th>
           <th>Apellido</th>
           <th>Cédula</th>
@@ -45,7 +47,9 @@
         {
         ?>
         <tr>
-          <td> <?php echo $row['salario'];?> </td>
+          <?php
+          /* <td> <?php echo $row['salario'];?> </td> */
+          ?>
           <td> <?php echo $row['nombre'];?> </td>
           <td> <?php echo $row['apellido'];?> </td>
           <td> <?php echo $row['cedula'];?> </td>

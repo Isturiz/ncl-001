@@ -124,20 +124,21 @@
                 
                 value="Yucatán">
             </div>
-
+            <?php
+            /*
             <!-- Salario -->
             <div class="mt-3 col-md-12">
               <p class="fw-bold form-label fs-4">Salario:</p>
             </div>
-
+            
             <div class="mb-3 col-md-3">
-                <label 
-                for="salario"
-                class="form-label">
-                Monto $:
-              </label>
-              <input
-              
+              <label 
+              for="salario"
+              class="form-label">
+              Monto $:
+            </label>
+            <input
+            
               type="number"
               class="form-control"
               id="salario"
@@ -145,7 +146,9 @@
               
               value="160">
             </div>
-
+            */  
+            ?>
+          
             <!-- registrar -->
             <button
               type="submit"

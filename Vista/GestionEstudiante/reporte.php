@@ -41,7 +41,7 @@
         
       <tbody>
         <tr>
-          <td> <?php echo $mensualidad; ?>     </td>
+          <td> <?php echo $mensualidad; ?></td>
           <td> <?php echo $nombre; ?>     </td>
           <td> <?php echo $apellido; ?>   </td>
           <td> <?php echo $nacimiento; ?> </td>
